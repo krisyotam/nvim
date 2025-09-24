@@ -1,13 +1,12 @@
 local alpha = require('alpha')
 local dashboard = require("alpha.themes.dashboard")
-dashboard.section.header.val = {
 
+-- Load headers
+local headers = require("plugins.headers")
 
-	[[  ^  ^  ^   ^☆ ★ ☆ ___I_☆ ★ ☆ ^  ^   ^  ^  ^   ^  ^ ]],
-	[[ /|\/|\/|\ /|\ ★☆ /\-_--\ ☆ ★/|\/|\ /|\/|\/|\ /|\/|\ ]],
-	[[ /|\/|\/|\ /|\ ★ /  \_-__\☆ ★/|\/|\ /|\/|\/|\ /|\/|\ ]],
-	[[ /|\/|\/|\ /|\ 󰻀 |[]| [] | 󰻀 /|\/|\ /|\/|\/|\ /|\/|\ ]],
-}
+-- Pick which header to use
+dashboard.section.header.val = headers["hatsune-miku"]
+
 
 dashboard.section.buttons.val = {
 	dashboard.button("e", "  New file", ":ene <BAR> startinsert <CR>"),
